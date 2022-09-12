@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 import Info from '../Info/Info';
+import Services from '../Services/Services';
 
 import Navbar from '../Sheard/Navbar';
 
@@ -9,7 +10,8 @@ const Header = () => {
        <>
        <Navbar></Navbar>
        <Banner></Banner>
-       <Info></Info>
+            <Info></Info>
+            <Services></Services>
        </>
       
     );
