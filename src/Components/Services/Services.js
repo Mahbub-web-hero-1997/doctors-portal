@@ -22,13 +22,13 @@ const Services = () => {
                     service={service}
                 ></Service>)}
             </div>           
-            <div class="hero min-h-screen w-11/12 mx-auto">
+            <div class="hero min-h-screen w-11/12 mx-auto mt-10 lg:mt-32">
                 <div class="hero-content flex-col lg:flex-row">
                     <img alt='' src={Treatment} class=" w-full lg:max-w-md rounded-lg shadow-2xl" />
                     <div className='w-full lg:w-1/2 text-left lg:ml-20' >
                         <h1 class=" text-3xl lg:text-5xl font-bold">Exceptional Dental Care, on Your Terms</h1>
                         <p class="py-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsumis that it has a more-or-less normal distribution of letters,as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page</p>
-                       <Button></Button>
+                       <Button>Book Now</Button>
                     </div>
                 </div>
             </div>     

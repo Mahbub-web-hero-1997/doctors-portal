@@ -5,6 +5,7 @@ import Info from '../Info/Info';
 import Services from '../Services/Services';
 
 import Navbar from '../Sheard/Navbar';
+import Testmonial from '../Testmonial/Testmonial';
 
 const Header = () => {
     return (
@@ -14,6 +15,7 @@ const Header = () => {
             <Info></Info>
             <Services></Services>
             <HomeAppointment></HomeAppointment>
+            <Testmonial></Testmonial>
        </>
       
     );
