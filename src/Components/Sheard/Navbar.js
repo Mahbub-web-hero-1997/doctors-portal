@@ -11,7 +11,7 @@ const Navbar = () => {
   
   </>
   return (
-    <div class="navbar bg-base-100">
+    <div class="navbar shadow-md sticky top-0 z-50 bg-white">
     <div class="navbar-start">
       <div class="dropdown">
         <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -31,7 +31,7 @@ const Navbar = () => {
       </ul>
     </div>
     <div class="navbar-end">
-    <Link className='btn text-xl font-semibold' to='#'>LogIn</Link>
+    <Link className='btn text-white font-semibold bg-secondary border-0' to='#'>LogIn</Link>
     </div>
   </div>
   );
