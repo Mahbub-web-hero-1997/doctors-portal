@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 import Contact from '../Contact/Contact';
+import Footer from '../Footer/Footer';
 import HomeAppointment from '../HomeAppointment/HomeAppointment';
 import Info from '../Info/Info';
 import Services from '../Services/Services';
@@ -18,6 +19,7 @@ const Header = () => {
             <HomeAppointment></HomeAppointment>
             <Testmonial></Testmonial>
             <Contact></Contact>
+            <Footer></Footer>
             
        </>
       

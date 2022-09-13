@@ -7,7 +7,9 @@ function App() {
   return (
     <div className="App container mx-auto">
       <Header></Header>
-      
+      <Routes>
+        <Route path='/' element={<Header></Header>}></Route>
+      </Routes>
     </div>
   );
 }
