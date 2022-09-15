@@ -4,10 +4,10 @@ import { DayPicker } from 'react-day-picker';
 
 import img from '../../assets/images/chair.png'
 
-const AppointmentBanner = () => {
-    const [selectedDay, setSelectedDay] = useState();
+const AppointmentBanner = ({ selectedDay, setSelectedDay }) => {
+    
     const footer = selectedDay ? (
-        <p>You selected {format(selectedDay, 'PPP')}.</p>
+        <p> {format(selectedDay, 'PPP')}.</p>
     ) : (
         <p>Please pick a day.</p>
     );

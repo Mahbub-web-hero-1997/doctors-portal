@@ -1,31 +1,33 @@
+import { format } from 'date-fns';
 import React, { useEffect, useState } from 'react';
-import Button from '../Sheard/Button';
+import BookingModal from './BookingModal';
+import Service from './Service';
 
 
-const AvailableAppointments = () => {
+const AvailableAppointments = ({ selectedDay, setSelectedDay } ) => {
     const [appointments, setAppointments] = useState([]);
+    const [treatment, setTreatment] = useState(null);
+   
     useEffect(() => {
         fetch('appointment.json')
             .then(res => res.json())
         .then(data=>setAppointments(data))
     },[])
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
-            {
-                appointments.map(appointment => <>
-                    <div class="card w-11/12 bg-base-100 shadow-xl mx-auto">
-                        <div class="card-body">
-                            <h2 class="text-xl text-center font-semibold">{ appointment.name}</h2>
-                            <p>{appointment.time}</p>
-                            <p>{appointment.space}</p>
-                            <div class="card-actions justify-center">
-                               <Button>Book Appointment</Button>
-                            </div>
-                        </div>
-                    </div>
-                </>)
-            }
-        </div>
+        <>
+            <h1 className='text-2xl font-semibold'>You selected {format(selectedDay, 'PP')}.</h1>
+            <hr className='w-11/12 lg:w-1/4 mx-auto mt-2'/>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                {
+                    appointments.map(appointment => <Service
+                        key={appointment.id}
+                        appointment={appointment}
+                        setTreatment={setTreatment}                       
+                    ></Service>)
+                }  
+                {treatment && <BookingModal treatment={treatment} selectedDay={selectedDay}></BookingModal>}
+            </div>
+        </>
     );
 };
 
