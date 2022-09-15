@@ -11,8 +11,7 @@ import Testmonial from '../Testmonial/Testmonials';
 
 const Header = () => {
     return (
-       <>
-       <Navbar></Navbar>
+       <>   
        <Banner></Banner>
             <Info></Info>
             <Services></Services>

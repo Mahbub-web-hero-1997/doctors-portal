@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const menuItems=<>
-  <li className='text-xl font-semibold'><Link to='#'>Home</Link></li>
+  <li className='text-xl font-semibold'><Link to='/'>Home</Link></li>
   <li className='text-xl font-semibold'><Link to='#'>About</Link></li>
-  <li className='text-xl font-semibold'><Link to='#'>Appointment</Link></li>
+  <li className='text-xl font-semibold'><Link to='appointment'>Appointment</Link></li>
   <li className='text-xl font-semibold'><Link to='#'>Reviews</Link></li>
   <li className='text-xl font-semibold'><Link to='#'>Contact</Link></li>
   
   </>
   return (
+    
     <div class="navbar shadow-md sticky top-0 z-50 bg-white">
     <div class="navbar-start">
       <div class="dropdown">
