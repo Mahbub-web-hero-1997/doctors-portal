@@ -15,8 +15,10 @@ const AppointmentBanner = ({ selectedDay, setSelectedDay }) => {
     return (
         <div class="hero min-h-screen">
             <div class="hero-content flex-col lg:flex-row-reverse w-full">
-                <img alt='' src={img} class="rounded-lg shadow-2xl w-full lg:w-1/2" />
-                <div className='w-full lg:w-1/2'>
+                <div data-aos='fade-left' className='w-full lg:w-1/2'>
+                    <img alt='' src={img} class="rounded-lg shadow-2xl w-full image-fluid" />
+                </div>
+                <div data-aos='fade-right' className='w-full lg:w-1/2'>
                     <DayPicker
                         mode="single"
                         selected={selectedDay}

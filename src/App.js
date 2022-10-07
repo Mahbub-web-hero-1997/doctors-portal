@@ -4,6 +4,9 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './Components/Header/Header';
 import Navbar from './Components/Sheard/Navbar';
 import Appointment from './Components/Appointment/Appointment';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 function App() {
   return (

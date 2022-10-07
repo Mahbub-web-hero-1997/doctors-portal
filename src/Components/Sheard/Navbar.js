@@ -12,7 +12,7 @@ const Navbar = () => {
   </>
   return (
     
-    <div class="navbar shadow-md sticky top-0 z-50 bg-white">
+    <div class="navbar sticky top-0 z-50 bg-white shadow-none">
     <div class="navbar-start">
       <div class="dropdown">
         <label tabindex="0" class="btn btn-ghost lg:hidden">

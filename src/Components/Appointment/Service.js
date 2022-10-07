@@ -4,7 +4,7 @@ import React from 'react';
 const Service = ({ appointment, setTreatment }) => {
     const { id, name, slots}=appointment;
     return (
-        <div>
+        <div data-aos="zoom-in-up" >
             <div class="card w-11/12 bg-base-100 shadow-xl mx-auto">
                 <div class="card-body">
                     <h2 class="text-xl text-center font-semibold">{name}</h2>

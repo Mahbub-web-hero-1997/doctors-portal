@@ -2,10 +2,13 @@ import { format } from 'date-fns';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-const BookingModal = ({ treatment, selectedDay }) => {
+const BookingModal = ({ treatment, selectedDay,setTreatment }) => {
     const { name, slots } = treatment;
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        console.log(data);
+        setTreatment(null)
+    };
    
     return (
         <div>
@@ -13,6 +16,7 @@ const BookingModal = ({ treatment, selectedDay }) => {
             <div class="modal modal-bottom sm:modal-middle">
                 <div class="modal-box">
                     <label for="booking_Modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <h1 className='text-xl font-semibold mb-2'>{ name}</h1>
                     <form onSubmit={handleSubmit(onSubmit)} className='grid grid-cols-1 gap-2'>
                         <input readOnly value={ format(selectedDay, 'PP') } {...register("date")} className=' border border-secondary rounded-sm p-2'/>                       
                         <select class=" border border-secondary rounded-sm p-2">

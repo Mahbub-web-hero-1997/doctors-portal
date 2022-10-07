@@ -12,7 +12,7 @@ const Testmonial = () => {
     },[])
    
     return (
-        <div className='px-6 mt-10 lg:mt-20'>
+        <div  className='px-6 mt-10 lg:mt-20'>
             <div className='flex justify-between mb-4'>
                 <div>
                     <p className='text-secondary text-left'>Testimonial</p>
